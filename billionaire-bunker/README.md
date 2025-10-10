@@ -46,3 +46,7 @@ Or simply:
 > "The wine cellar is holding up remarkably well. 1982 Margaux tastes even better when you know it's one of the last bottles on Earth. I do wonder sometimes about the sommelier's family on the surface. They had excellent taste."
 >
 > — Reginald Pemberton-Foxworth, hedge fund magnate, speaking from his climate-controlled compound beneath the Montana wilderness, Day 2,193
+
+## Disclaimer
+
+All billionaire names, quotes, and scenarios are entirely fictional and generated for satirical purposes. Any resemblance to real persons, living or dead, or actual events is purely coincidental.
