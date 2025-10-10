@@ -1,0 +1,25 @@
+{
+  "name": "billionaire-bunker",
+  "version": "1.0.0",
+  "description": "A plugin for billionaire bunker life",
+  "author": {
+    "name": "Russell Slater",
+    "url": "https://github.com/russellslater"
+  },
+  "repository": "https://github.com/russellslater/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "billionaire",
+    "bunker",
+    "apocalypse",
+    "post-apocalyptic",
+    "survival",
+    "dystopia",
+    "underground",
+    "satire",
+    "doomsday",
+    "prepper",
+    "elite",
+    "wealth"
+  ]
+}

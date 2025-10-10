@@ -1,0 +1,21 @@
+{
+  "name": "claude-plugins",
+  "owner": {
+    "name": "Russell Slater"
+  },
+  "metadata": {
+    "description": "Custom Claude Code plugins marketplace for the discerning developer",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "billionaire-bunker",
+      "source": "./billionaire-bunker",
+      "description": "A plugin for billionaire bunker life",
+      "version": "1.0.0",
+      "author": {
+        "name": "Russell Slater"
+      }
+    }
+  ]
+}
