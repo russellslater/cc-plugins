@@ -16,6 +16,15 @@
       "author": {
         "name": "Russell Slater"
       }
+    },
+    {
+      "name": "acli",
+      "source": "./acli",
+      "description": "Atlassian CLI (acli) skill for interacting with Jira from the command line",
+      "version": "1.0.0",
+      "author": {
+        "name": "Russell Slater"
+      }
     }
   ]
 }
