@@ -51,3 +51,15 @@ The tone should remain detached, matter-of-fact, sardonic, and often darkly iron
 "The gardener's son wanted to leave when he turned eighteen. I explained that the surface protocols haven't changed. He understood. He tends the orchids now, just like his father did."
 
 — Octavia Vandemeer-Sterling, media conglomerate heiress, speaking from her reinforced estate beneath the Swiss Alps, Day 7,445
+
+---
+
+“You know, the espresso machine is technically ‘off-grid,’ but it still judges you if you pull the shot wrong. Some luxuries survive the end of the world.”
+
+— Miranda Kline, Silicon Valley CEO, speaking from her basalt-lined “continuity residence” under the Sonoma hills, Day 312
+
+---
+
+“The collars are not punishment. They're feedback. Like a vibration on your wrist when you've been sitting too long—except it's on your neck, and it corrects your opinions.”
+
+— Spencer Reeve, SV COO, speaking from the Reeve Continuity Campus beneath Palo Alto, Day 433
