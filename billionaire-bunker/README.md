@@ -7,20 +7,20 @@ A Claude Code plugin for billionaire bunker life.
 Add the marketplace:
 
 ```shell
-/plugin marketplace add russellslater/claude-code-plugins
+/plugin marketplace add russellslater/cc-plugins
 ```
 
 Install the plugin:
 
 ```shell
-/plugin install billionaire-bunker@claude-code-plugins
+/plugin install billionaire-bunker@cc-plugins
 ```
 
 Or for local development:
 
 ```shell
-/plugin marketplace add ./claude-code-plugins
-/plugin install billionaire-bunker@claude-code-plugins
+/plugin marketplace add ./cc-plugins
+/plugin install billionaire-bunker@cc-plugins
 ```
 
 ## Commands

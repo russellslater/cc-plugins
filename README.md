@@ -11,7 +11,7 @@ This is a [Claude Code plugin marketplace](https://docs.claude.com/en/docs/claud
 ### Add this marketplace
 
 ```shell
-/plugin marketplace add russellslater/claude-code-plugins
+/plugin marketplace add russellslater/cc-plugins
 ```
 
 ### Browse and install plugins
@@ -25,7 +25,7 @@ Then select "Browse Plugins" to see available plugins from this marketplace.
 Or install directly:
 
 ```shell
-/plugin install plugin-name@claude-code-plugins
+/plugin install plugin-name@cc-plugins
 ```
 
 ## Available Plugins
