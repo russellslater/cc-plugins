@@ -36,6 +36,12 @@ Get quotes from fictitious billionaires about their post-apocalyptic bunker life
 
 **Command:** `/bunker-status`
 
+### [acli](./acli)
+
+Atlassian CLI (acli) skill for interacting with Jira from the command line. Search, view, create, edit, and transition issues; manage sprints and boards.
+
+**Skill:** Automatically loaded when working with Jira
+
 ## Learn More
 
 - [Announcement: Customize Claude Code with plugins](https://www.anthropic.com/news/claude-code-plugins)

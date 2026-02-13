@@ -1,0 +1,9 @@
+{
+  "name": "acli",
+  "version": "1.0.0",
+  "description": "Atlassian CLI (acli) skill for interacting with Jira from the command line. Covers searching, viewing, creating, editing, and transitioning issues; managing sprints and boards.",
+  "author": {
+    "name": "Russell Slater"
+  },
+  "license": "MIT"
+}
