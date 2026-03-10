@@ -1,0 +1,9 @@
+{
+  "name": "apple-notes",
+  "version": "0.1.0",
+  "description": "Read, write, and manage notes in Apple Notes via MCP",
+  "author": {
+    "name": "Russell Slater"
+  },
+  "keywords": ["notes", "apple-notes", "macos", "productivity"]
+}

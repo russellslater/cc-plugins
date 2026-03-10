@@ -25,6 +25,15 @@
       "author": {
         "name": "Russell Slater"
       }
+    },
+    {
+      "name": "apple-notes",
+      "source": "./apple-notes",
+      "description": "Read, write, and manage notes in Apple Notes via MCP (macOS only, requires Node.js)",
+      "version": "0.1.0",
+      "author": {
+        "name": "Russell Slater"
+      }
     }
   ]
 }
