@@ -11,6 +11,65 @@ import { promisify } from "util";
 
 const execFileAsync = promisify(execFile);
 
+function convertMarkdownToHtml(md) {
+  const lines = md.split("\n");
+  const htmlLines = [];
+  let inUl = false;
+  let inOl = false;
+
+  function closeList() {
+    if (inUl) { htmlLines.push("</ul>"); inUl = false; }
+    if (inOl) { htmlLines.push("</ol>"); inOl = false; }
+  }
+
+  function inlineFormat(text) {
+    text = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    text = text.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+    text = text.replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, "<i>$1</i>");
+    text = text.replace(/(?<!_)_(?!_)(.+?)(?<!_)_(?!_)/g, "<i>$1</i>");
+    return text;
+  }
+
+  for (const line of lines) {
+    const headingMatch = line.match(/^(#{1,3})\s+(.+)$/);
+    if (headingMatch) {
+      closeList();
+      const level = headingMatch[1].length;
+      htmlLines.push(`<h${level}>${inlineFormat(headingMatch[2])}</h${level}>`);
+      continue;
+    }
+    const ulMatch = line.match(/^[\s]*[-*]\s+(.+)$/);
+    if (ulMatch) {
+      if (inOl) { htmlLines.push("</ol>"); inOl = false; }
+      if (!inUl) { htmlLines.push("<ul>"); inUl = true; }
+      htmlLines.push(`<li>${inlineFormat(ulMatch[1])}</li>`);
+      continue;
+    }
+    const olMatch = line.match(/^[\s]*\d+\.\s+(.+)$/);
+    if (olMatch) {
+      if (inUl) { htmlLines.push("</ul>"); inUl = false; }
+      if (!inOl) { htmlLines.push("<ol>"); inOl = true; }
+      htmlLines.push(`<li>${inlineFormat(olMatch[1])}</li>`);
+      continue;
+    }
+    closeList();
+    if (line.match(/^---+$/)) { htmlLines.push("<br/>"); continue; }
+    if (line.trim() === "") { htmlLines.push("<br/>"); continue; }
+    htmlLines.push(`<div>${inlineFormat(line)}</div>`);
+  }
+  closeList();
+  return htmlLines.join("\n");
+}
+
+function looksLikeHtml(content) {
+  return /^\s*<[a-z][a-z0-9]*[\s>]/i.test(content);
+}
+
+function ensureHtml(content) {
+  if (looksLikeHtml(content)) return content;
+  return convertMarkdownToHtml(content);
+}
+
 function getErrorMessage(error) {
   if (error instanceof Error) return error.message;
   if (typeof error === "string") return error;
@@ -258,7 +317,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
     case "add_note": {
       const name = String(request.params.arguments?.name);
-      const content = String(request.params.arguments?.content);
+      const content = ensureHtml(String(request.params.arguments?.content));
       const folder = String(request.params.arguments?.folder || "Notes");
 
       if (!name || !content) {
@@ -298,7 +357,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
     case "update_note_content": {
       const noteName = String(request.params.arguments?.note_name);
-      const newContent = String(request.params.arguments?.new_content);
+      const newContent = ensureHtml(String(request.params.arguments?.new_content));
       const folder = request.params.arguments?.folder;
 
       if (!noteName || !newContent) {
